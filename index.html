@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="nav-brand" href="#">
           <img src="img/jH Favicon.png" alt="Avatar Logo" style="width:40px;" class="square"/>
@@ -45,19 +45,29 @@
     </nav>
     <div class="container-fluid">
       <div class="row flex-xl-nowrap">
-        <div class="col-12 col-md-3 col-xl-2 py-3 bd-sidebar">
-          <img src="img/literallyme.jpg" style="width: 120px; border-radius: 50%;" alt="John Holcomb">
+        <div class="col-12 col-md-4 col-xl-3 py-3 bd-sidebar">
+          <img src="img/literallyme.jpg" class="rounded d-block" style="width: 120px; border-radius: 50%;" alt="John Holcomb">
           <h1 style="color:white">John Holcomb</h1>
-          <h4 style="color:lightgray">Senior Technical Support Agent @ LSU ITS</h4>
-          <h4 style="color:lightgray">Junior in Computer Science @ LSU</h4>
+          <h4 style="color:lightgray">Junior in Computer Science</h4>
+          <p style="color:lightgray">@ Louisiana State University (LSU)</p>
+          <h4 style="color:lightgray">Senior Technical Support Agent</h4>
+          <p style="color:lightgray">@ LSU Information Techology Services (ITS)</p>
+          <div class="d-flex">
+            <a class="social-icon" href="https://www.linkedin.com/in/johnholcomb10/" target="_blank">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+            <a class="social-icon" href="https://github.com/johnholcomb10" target="_blank">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </div>
       </div>
-        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+        <main class="col-12 col-md-8 col-xl-6 py-md-3 pl-md-5 bd-content" role="main">
           <div class="card text-white w3-theme-p border-white" style="text-align:center;">
             <div class="card-header">
               <h2>About Me</h2>
             </div>
             <div class="card-body">
-              <p style="text-align: left;">I am an Internet Technology Services (ITS) Senior Technical Support Agent and Computer Science major, cybersecurity concentration, as a junior at Louisiana State University (LSU). I have a wide range of experiences within internet technology, spanning from password and authentication management to network connectivity support. Prior to being a student at LSU, I was enrolled in the IT Networking Academy at Harford Technical High School, Maryland, covering certification courses, such as CompTIA A+, Security+, and CCNA. Across all my academics and occupations, I am motivated by diagnosing and troubleshooting customer-sided issues while providing technical-driven solutions.</p>
+              <p style="text-align: left;">I am an Information Technology Services (ITS) Senior Technical Support Agent and Computer Science major, cybersecurity concentration, as a junior at Louisiana State University (LSU). I have a wide range of experiences within internet technology, spanning from password and authentication management to network connectivity support. Prior to being a student at LSU, I was enrolled in the IT Networking Academy at Harford Technical High School, Maryland, covering certification courses, such as CompTIA A+, Security+, and CCNA. Across all my academics and occupations, I am motivated by diagnosing and troubleshooting customer-sided issues while providing technical-driven solutions.</p>
             </div>
           </div>
         </main>
@@ -105,5 +115,7 @@
       </div>
     </div>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   </body>
 </html>
