@@ -7,8 +7,8 @@
   color: #aaaaaa;
   transition: color 0.2s;
   text-decoration: none;
-  margin: 0 10px;
-  font-size: 200%;
+  margin: 0 4px;
+  font-size: 80%;
 }
 
 .social-icon:hover {
