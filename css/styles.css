@@ -27,6 +27,18 @@
   color: #ffffff;
 }
 
+.white-social-icon {
+  color: #ffffff;
+  transition: color 0.2s;
+  text-decoration: none;
+  margin: 0 4px;
+  font-size: 80%;
+}
+
+.white-social-icon:hover {
+  color: #aaaaaa;
+}
+
 .table-cell {
   font-style: italic;
 }
