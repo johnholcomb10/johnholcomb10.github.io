@@ -11,10 +11,11 @@
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
+    <a id="Home"></a>
     <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="nav-brand" href="#">
-          <img src="img/jH Favicon.png" alt="Avatar Logo" style="width:40px;" class="square"/>
+      <div class="container-lg">
+        <a class="nav-brand" href="#Home">
+          <img src="img/jH Favicon.png" alt="Avatar Logo" style="width:40px;" class="rounded d-block"/>
         </a>
         <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-label="Expand Navigation">
           <span class="navbar-toggler-icon"></span>
@@ -22,10 +23,10 @@
         <div class="collapse navbar-collapse" id="nav">
           <ul class="navbar-nav">
             <li class="nav-item"></li>
-              <a href="#" class="nav-link">Home</a>
+              <a href="#Home" class="nav-link">Home</a>
             </li>
             <li class="nav-item"></li>
-              <a href="#" class="nav-link">Work</a>
+              <a href="#JobExperience" class="nav-link">Work</a>
             </li>
             <li class="nav-item"></li>
               <a href="#" class="nav-link">Education</a>
@@ -43,9 +44,17 @@
         </div>
       </div>
     </nav>
-    <div class="container-fluid">
+    <div class="container-lg py-3">
+      <div class="alert alert-warning alert-dismissible fade show py-3" role="alert">
+        <h2>Disclaimer</h2>
+        <p>All content here is subject to updates. Please check the date of last update on the footer of this page to ensure the content here is current. For the most up-to-date information on me, you can go to my LinkedIn page (link in Home page).
+        </p>
+        <p>Made for Google Chrome, resolutions 360-1920px wide.</p>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"
+        ></button>
+      </div>
       <div class="row flex-xl-nowrap">
-        <div class="col-12 col-md-4 col-xl-3 py-3 bd-sidebar">
+        <div class="col-12 col-md-4 bd-sidebar">
           <img src="img/literallyme.jpg" class="rounded d-block" style="width: 120px; border-radius: 50%;" alt="John Holcomb">
           <h1 style="color:white">John Holcomb</h1>
           <h4 style="color:lightgray">Junior in Computer Science</h4>
@@ -60,26 +69,31 @@
               <ion-icon name="logo-github"></ion-icon>
             </a>
           </div>
-      </div>
-        <main class="col-12 col-md-8 col-xl-6 py-md-3 pl-md-5 bd-content" role="main">
-          <div class="card text-white w3-theme-p border-white" style="text-align:center;">
+        </div>
+        <main class="col-12 col-md-8 pl-md-5 bd-content" role="main">
+          <div class="card text-white bg-dark bg-opacity-75 border-white" style="text-align:center; height: max-content;">
             <div class="card-header">
               <h2>About Me</h2>
             </div>
             <div class="card-body">
-              <p style="text-align: left;">I am an Information Technology Services (ITS) Senior Technical Support Agent and Computer Science major, cybersecurity concentration, as a junior at Louisiana State University (LSU). I have a wide range of experiences within internet technology, spanning from password and authentication management to network connectivity support. Prior to being a student at LSU, I was enrolled in the IT Networking Academy at Harford Technical High School, Maryland, covering certification courses, such as CompTIA A+, Security+, and CCNA. Across all my academics and occupations, I am motivated by diagnosing and troubleshooting customer-sided issues while providing technical-driven solutions.</p>
+              <p style="text-align: left; font-size: 125%;">I am an Information Technology Services (ITS) Senior Technical Support Agent and Computer Science major, cybersecurity concentration, as a junior at Louisiana State University (LSU). I have a wide range of experiences within internet technology, spanning from password and authentication management to network connectivity support. Prior to being a student at LSU, I was enrolled in the IT Networking Academy at Harford Technical High School, Maryland, covering certification courses, such as CompTIA A+, Security+, and CCNA. Across all my academics and occupations, I am motivated by diagnosing and troubleshooting customer-sided issues while providing technical-driven solutions.</p>
+              <a class="social-icon" href="#JobExperience" style="margin: 0 0;">
+                <p>Continue to learn more about me.<br>
+                  <ion-icon name="chevron-down-circle-outline"></ion-icon>            
+                </p>
+              </a>
             </div>
           </div>
         </main>
       </div>
     </div>
-    <div class="container-fluid py-3">
-      <h1 style="color: white;">Job Experience</h1>
+    <div class="container-lg py-3">
+      <h2 id="JobExperience" style="color: white;">Job Experience</h2>
       <div class="row">
-        <div class="col-12 col-lg-4 col-sm-6">
+        <div class="col-12 col-xl-3 col-md-4 col-sm-6">
           <div class="card text-white bg-primary bg-opacity-50 border-white">
             <div class="card-header">
-              <h3>IT Intern</h3>
+              <h4>IT Intern</h4>
               <h5 style="color:lightgray">@ Hershey Entertainment & Resorts: Event Technology Services</h5>
               <h5 style="color:lightgray">PA | Summer 2026</h5>
             </div>
@@ -88,22 +102,34 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-lg-4 col-sm-6">
+        <div class="col-12 col-xl-3 col-md-4 col-sm-6">
           <div class="card text-white bg-warning bg-opacity-50 border-white">
             <div class="card-header">
-              <h3>Senior Technical Support Agent</h3>
+              <h4>Senior Technical Support Agent</h4>
               <h5 style="color:lightgray">@ LSU: ITS Service Desk</h5>
-              <h5 style="color:lightgray">LA | Jan 2024 - Current</h5>
+              <h5 style="color:lightgray">LA | Sep 2025 - Current</h5>
             </div>
             <div class="card-body">
               <p>text</p>
             </div>
           </div>
         </div>
-        <div class="col-12 col-lg-4 col-sm-6">
+        <div class="col-12 col-xl-3 col-md-4 col-sm-6">
           <div class="card text-white bg-danger bg-opacity-50 border-white">
             <div class="card-header">
-              <h3>Ropes Wrangler</h3>
+              <h4>Technical Support Agent</h4>
+              <h5 style="color:lightgray">@ LSU: ITS Service Desk</h5>
+              <h5 style="color:lightgray">LA | Jan 2024 - Sep 2025</h5>
+            </div>
+            <div class="card-body">
+              <p>text</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-xl-3 col-md-4 col-sm-6">
+          <div class="card text-white bg-success bg-opacity-50 border-white">
+            <div class="card-header">
+              <h4>Ropes Wrangler</h4>
               <h5 style="color:lightgray">@ River Valley Ranch</h5>
               <h5 style="color:lightgray">MD | Summer 2024/2025</h5>
             </div>
