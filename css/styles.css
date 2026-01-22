@@ -32,7 +32,8 @@
 }
 
 .table-cell:hover {
-  font-size: 110%;
+  font-size: 105%;
+  transition: font-size 0.3s;
 }
 
 body {
