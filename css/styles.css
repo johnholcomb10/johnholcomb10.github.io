@@ -1,0 +1,29 @@
+.w3-theme-lp {color:#000 !important; background-color:#c1ade5 !important}
+.w3-theme-p {color:#fff !important; background-color:#845bcb !important}
+.w3-theme-la {color:#000 !important; background-color:#ffe69b !important}
+.w3-theme-a {color:#000 !important; background-color:#ffcd37 !important}
+
+.social-icon {
+  color: #aaaaaa;
+  transition: color 0.2s;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 200%;
+}
+
+.social-icon:hover {
+  color: #ffffff;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../img/freybg.jpg');
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: darken;
+  backdrop-filter: grayscale(30%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
