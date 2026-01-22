@@ -15,6 +15,18 @@
   color: #ffffff;
 }
 
+.dark-social-icon {
+  color: #000000;
+  transition: color 0.2s;
+  text-decoration: none;
+  margin: 0 4px;
+  font-size: 80%;
+}
+
+.dark-social-icon:hover {
+  color: #ffffff;
+}
+
 .table-cell {
   font-style: italic;
 }
@@ -24,8 +36,6 @@
 }
 
 body {
-  height: 100vh;
-  width: 100vw;
   background-image: url('../img/freybg.jpg');
   background-color: rgba(0, 0, 0, 0.6);
   background-blend-mode: darken;
