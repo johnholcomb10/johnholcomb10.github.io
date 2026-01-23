@@ -48,6 +48,15 @@
   transition: font-size 0.3s;
 }
 
+/*
+Source - https://stackoverflow.com/a/20358308
+Posted by FredTheLover, modified by community. See post 'Timeline' for change history
+Retrieved 2026-01-23, License - CC BY-SA 3.0
+
+Positions anchor lower than where it actually appears on screen, preventing header from blocking intended target.
+*/
+a.anchor{display: block; position: relative; top: -70px; visibility: hidden;}
+
 body {
   background-image: url('../img/freybg.jpg');
   background-color: rgba(0, 0, 0, 0.6);
