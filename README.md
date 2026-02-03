@@ -23,5 +23,5 @@ This is my portfolio website, made as a project for my CSC 4330 (Software System
 - IDE: VSCode  
     Helpful extensions: 
   - HTML CSS Support :: ecmel.vscode-html-css
-  - Bootstrap 5 QUick Snippets :: AnbuselvanRocky.bootstrap5-vscode
+  - Bootstrap 5 Quick Snippets :: AnbuselvanRocky.bootstrap5-vscode
   - Microsoft Edge Tools for VS Code :: ms-edgedevtools.vscode-edge-devtools
