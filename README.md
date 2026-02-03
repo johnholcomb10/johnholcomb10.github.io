@@ -20,7 +20,7 @@ This is my portfolio website, made as a project for my CSC 4330 (Software System
 
 - Languages: HTML 5, CSS
 - Framework: Bootstrap v5.3.8
-- IDE: VSCode 
+- IDE: VSCode  
     Helpful extensions: 
   - HTML CSS Support :: ecmel.vscode-html-css
   - Bootstrap 5 QUick Snippets :: AnbuselvanRocky.bootstrap5-vscode
