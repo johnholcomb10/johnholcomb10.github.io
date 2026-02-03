@@ -1,7 +1,22 @@
-.w3-theme-lp {color:#000 !important; background-color:#c1ade5 !important}
-.w3-theme-p {color:#fff !important; background-color:#845bcb !important}
-.w3-theme-la {color:#000 !important; background-color:#ffe69b !important}
-.w3-theme-a {color:#000 !important; background-color:#ffcd37 !important}
+.w3-theme-lp {
+  color:#000 !important;
+  background-color:#c1ade5 !important;
+}
+
+.w3-theme-p {
+  color:#fff !important;
+  background-color:#845bcb !important;
+}
+
+.w3-theme-la {
+  color:#000 !important;
+  background-color:#ffe69b !important;
+}
+
+.w3-theme-a {
+  color:#000 !important;
+  background-color:#ffcd37 !important;
+}
 
 .social-icon {
   color: #aaaaaa;
@@ -55,7 +70,16 @@ Retrieved 2026-01-23, License - CC BY-SA 3.0
 
 Positions anchor lower than where it actually appears on screen, preventing header from blocking intended target.
 */
-a.anchor{display: block; position: relative; top: -70px; visibility: hidden;}
+a.anchor {
+  display: block;
+  position: relative;
+  top: -70px;
+  visibility: hidden;
+}
+
+html {
+  overflow: none;
+}
 
 body {
   background-image: url('../img/freybg.jpg');
