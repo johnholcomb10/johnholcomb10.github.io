@@ -18,6 +18,33 @@
   background-color:#ffcd37 !important;
 }
 
+/*-------------------------*/
+/* Custom scrollbar styles */
+
+/* WebKit browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #9e7604;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffb900;
+    border-radius: 3px;
+}
+
+/* Firefox only */
+@supports (-moz-appearance: none) {
+    html {
+        scrollbar-width: thin;
+        scrollbar-color: #ffb900 #9e7604;
+    }
+}
+
+/*-------------------------*/
+
 .social-icon {
   color: #aaaaaa;
   transition: color 0.2s;
@@ -60,7 +87,6 @@
 
 .table-cell:hover {
   font-size: 105%;
-  transition: font-size 0.3s;
 }
 
 /*
@@ -85,9 +111,88 @@ body {
   background-image: url('../img/freybg.jpg');
   background-color: rgba(0, 0, 0, 0.6);
   background-blend-mode: darken;
-  backdrop-filter: grayscale(30%);
+  -webkit-backdrop-filter: grayscale(30%); /* Safari */
+  backdrop-filter: grayscale(30%); /* Other browsers */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+/* ── Navbar ── */
+.nav-logo {
+  width: 40px;
+}
+
+/* ── Sidebar ── */
+.profile-photo {
+  width: 120px;
+  border-radius: 50%;
+}
+
+.text-white-heading {
+  color: white;
+}
+
+.text-lightgray {
+  color: lightgray;
+}
+
+/* ── About Me card ── */
+.about-card {
+  text-align: center;
+  height: max-content;
+}
+
+.about-card .card-body p {
+  text-align: left;
+  font-size: 125%;
+}
+
+.about-card-link {
+  margin: 0;
+  font-size: 200%;
+}
+
+/* ── Job / Education card body paragraphs ── */
+.card-body-left {
+  text-align: left;
+}
+
+/* ── Section headings ── */
+.section-heading {
+  color: white;
+}
+
+/* ── Job experience card subtitles ── */
+.card-subtitle-gray {
+  color: lightgray;
+}
+
+/* ── Education cards ── */
+.bg-lsu {
+  background-color: #845bcb7e;
+}
+
+.bg-harford {
+  background-color: #ffe69b85;
+}
+
+/* ── Project cards ── */
+.bg-hellskate {
+  background-color: #fa4109ab;
+}
+
+.bg-rollcall {
+  background-color: #fa860984;
+}
+
+/* ── Contact section links ── */
+.contact-link {
+  margin: 0;
+  font-size: 150%;
+}
+
+.contact-link ion-icon {
+  font-size: 150%;
 }
