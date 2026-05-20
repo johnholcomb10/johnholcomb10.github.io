@@ -1,0 +1,29 @@
+{
+  "name": "johnholcomb.github.io",
+  "version": "1.0.0",
+  "description": "John Holcomb (johnholcomb10)",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass css/main.scss css/main.css --style compressed --no-source-map",
+    "watch": "sass css/main.scss css/main.css --watch"
+  },
+  "devDependencies": {
+    "sass": "^1.89.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnholcomb10/johnholcomb10.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/johnholcomb10/johnholcomb10.github.io/issues"
+  },
+  "homepage": "https://github.com/johnholcomb10/johnholcomb10.github.io#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "ionicons": "^7.1.0"
+  }
+}

@@ -1,3 +1,5 @@
+@import "bootstrap.min.css";
+
 .w3-theme-lp {
   color:#000 !important;
   background-color:#c1ade5 !important;
@@ -20,27 +22,19 @@
 
 /*-------------------------*/
 /* Custom scrollbar styles */
-
-/* WebKit browsers (Chrome, Edge, Safari) */
-::-webkit-scrollbar {
-    width: 6px;
+html {
+    overflow: scroll; overflow-x: hidden;
 }
 
-::-webkit-scrollbar-track {
-    background: #9e7604;
-}
+/* WebKit browsers */
+::-webkit-scrollbar { width: 4px; background: #212529;}
 
-::-webkit-scrollbar-thumb {
-    background: #ffb900;
-    border-radius: 3px;
-}
+::-webkit-scrollbar-thumb { background: #FFFFFF; border-radius: 2px; }
 
-/* Firefox only */
-@supports (-moz-appearance: none) {
-    html {
-        scrollbar-width: thin;
-        scrollbar-color: #ffb900 #9e7604;
-    }
+/* Non-WebKit browsers */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #FFFFFF #212529;
 }
 
 /*-------------------------*/
@@ -101,10 +95,6 @@ a.anchor {
   position: relative;
   top: -70px;
   visibility: hidden;
-}
-
-html {
-  overflow: none;
 }
 
 body {
@@ -196,3 +186,4 @@ body {
 .contact-link ion-icon {
   font-size: 150%;
 }
+
