@@ -1,0 +1,189 @@
+@import "bootstrap.min.css";
+
+.w3-theme-lp {
+  color:#000 !important;
+  background-color:#c1ade5 !important;
+}
+
+.w3-theme-p {
+  color:#fff !important;
+  background-color:#845bcb !important;
+}
+
+.w3-theme-la {
+  color:#000 !important;
+  background-color:#ffe69b !important;
+}
+
+.w3-theme-a {
+  color:#000 !important;
+  background-color:#ffcd37 !important;
+}
+
+/*-------------------------*/
+/* Custom scrollbar styles */
+html {
+    overflow: scroll; overflow-x: hidden;
+}
+
+/* WebKit browsers */
+::-webkit-scrollbar { width: 4px; background: #212529;}
+
+::-webkit-scrollbar-thumb { background: #FFFFFF; border-radius: 2px; }
+
+/* Non-WebKit browsers */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #FFFFFF #212529;
+}
+
+/*-------------------------*/
+
+.social-icon {
+  color: #aaaaaa;
+  transition: color 0.2s;
+  text-decoration: none;
+  margin: 0 4px;
+  font-size: 80%;
+}
+
+.social-icon:hover {
+  color: #ffffff;
+}
+
+.dark-social-icon {
+  color: #000000;
+  transition: color 0.2s;
+  text-decoration: none;
+  margin: 0 4px;
+  font-size: 80%;
+}
+
+.dark-social-icon:hover {
+  color: #ffffff;
+}
+
+.white-social-icon {
+  color: #ffffff;
+  transition: color 0.2s;
+  text-decoration: none;
+  margin: 0 4px;
+  font-size: 80%;
+}
+
+.white-social-icon:hover {
+  color: #aaaaaa;
+}
+
+.table-cell {
+  font-style: italic;
+}
+
+.table-cell:hover {
+  font-size: 105%;
+}
+
+/*
+Source - https://stackoverflow.com/a/20358308
+Posted by FredTheLover, modified by community. See post 'Timeline' for change history
+Retrieved 2026-01-23, License - CC BY-SA 3.0
+
+Positions anchor lower than where it actually appears on screen, preventing header from blocking intended target.
+*/
+a.anchor {
+  display: block;
+  position: relative;
+  top: -70px;
+  visibility: hidden;
+}
+
+body {
+  background-image: url('../img/freybg.jpg');
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: darken;
+  -webkit-backdrop-filter: grayscale(30%); /* Safari */
+  backdrop-filter: grayscale(30%); /* Other browsers */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* ── Navbar ── */
+.nav-logo {
+  width: 40px;
+}
+
+/* ── Sidebar ── */
+.profile-photo {
+  width: 120px;
+  border-radius: 50%;
+}
+
+.text-white-heading {
+  color: white;
+}
+
+.text-lightgray {
+  color: lightgray;
+}
+
+/* ── About Me card ── */
+.about-card {
+  text-align: center;
+  height: max-content;
+}
+
+.about-card .card-body p {
+  text-align: left;
+  font-size: 125%;
+}
+
+.about-card-link {
+  margin: 0;
+  font-size: 200%;
+}
+
+/* ── Job / Education card body paragraphs ── */
+.card-body-left {
+  text-align: left;
+}
+
+/* ── Section headings ── */
+.section-heading {
+  color: white;
+}
+
+/* ── Job experience card subtitles ── */
+.card-subtitle-gray {
+  color: lightgray;
+}
+
+/* ── Education cards ── */
+.bg-lsu {
+  background-color: #845bcb7e;
+}
+
+.bg-harford {
+  background-color: #ffe69b85;
+}
+
+/* ── Project cards ── */
+.bg-hellskate {
+  background-color: #fa4109ab;
+}
+
+.bg-rollcall {
+  background-color: #fa860984;
+}
+
+/* ── Contact section links ── */
+.contact-link {
+  margin: 0;
+  font-size: 150%;
+}
+
+.contact-link ion-icon {
+  font-size: 150%;
+}
+
