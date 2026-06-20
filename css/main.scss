@@ -168,6 +168,22 @@ a.anchor {
   @extend .navbar-expand-sm;
   @extend .navbar-dark;
   @extend .bg-dark;
+
+  .container-lg {
+    position: relative;
+  }
+
+  @include media-breakpoint-up(sm) {
+    .navbar-collapse {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+  }
 }
 
 .nav-logo {
