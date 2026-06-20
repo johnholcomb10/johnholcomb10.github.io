@@ -5,7 +5,7 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 // ==========================================================================
-// Theme colors (w3-theme remnants)
+// Theme colors
 // ==========================================================================
 .w3-theme-lp {
   color: #000 !important;
@@ -25,6 +25,21 @@
 .w3-theme-a {
   color: #000 !important;
   background-color: #ffcd37 !important;
+}
+
+// ==========================================================================
+// Body background
+// ==========================================================================
+body {
+  background-image: url('../img/freybg.jpg');
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: darken;
+  -webkit-backdrop-filter: grayscale(30%); // Safari
+  backdrop-filter: grayscale(30%); // Other browsers
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 // ==========================================================================
@@ -86,6 +101,12 @@ html {
   }
 }
 
+.large-icon-link {
+  @extend .text-center;
+  margin: 0;
+  font-size: 200%;
+}
+
 // ==========================================================================
 // Table cells
 // ==========================================================================
@@ -115,18 +136,27 @@ a.anchor {
 }
 
 // ==========================================================================
-// Body background
+// Section headings & banded section backgrounds
 // ==========================================================================
-body {
-  background-image: url('../img/freybg.jpg');
-  background-color: rgba(0, 0, 0, 0.6);
-  background-blend-mode: darken;
-  -webkit-backdrop-filter: grayscale(30%); // Safari
-  backdrop-filter: grayscale(30%); // Other browsers
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+.section-heading {
+  color: white;
+}
+
+// Job Experience, Projects, and Contact sections
+.section-banded {
+  @extend .container-lg;
+  @extend .py-3;
+  @extend .bg-light;
+  @extend .bg-opacity-25;
+  @extend .border-white;
+  @extend .text-center;
+}
+
+// Education and Awards sections
+.section-plain {
+  @extend .container-lg;
+  @extend .py-3;
+  @extend .text-center;
 }
 
 // ==========================================================================
@@ -144,6 +174,13 @@ body {
   @extend .rounded;
   @extend .d-block;
   width: 40px;
+}
+
+// ==========================================================================
+// Disclaimer
+// ==========================================================================
+.alert {
+  @extend .text-center;
 }
 
 // ==========================================================================
@@ -177,48 +214,8 @@ body {
   height: max-content;
 
   .card-body p {
-    text-align: left;
-    font-size: 125%;
+    font-size: 125%; 
   }
-}
-
-// Icon link used to jump from About Me into the next section, and reused
-// on each project card's "view repository" link.
-.about-card-link {
-  @extend .text-center;
-  margin: 0;
-  font-size: 200%;
-}
-
-// ==========================================================================
-// Job / Education card body paragraphs
-// ==========================================================================
-.card-body-left {
-  text-align: left;
-}
-
-// ==========================================================================
-// Section headings & banded section backgrounds
-// ==========================================================================
-.section-heading {
-  color: white;
-}
-
-// Job Experience, Projects, and Contact sections all share this banding
-.section-banded {
-  @extend .container-lg;
-  @extend .py-3;
-  @extend .bg-light;
-  @extend .bg-opacity-25;
-  @extend .border-white;
-  @extend .text-center;
-}
-
-// Education and Awards sections share this plain (unbanded) layout
-.section-plain {
-  @extend .container-lg;
-  @extend .py-3;
-  @extend .text-center;
 }
 
 // ==========================================================================

@@ -3946,10 +3946,10 @@ textarea.form-control-lg {
 .navbar > .container-md,
 .navbar-custom > .container-md,
 .navbar > .container-lg,
-.navbar > .section-plain,
-.navbar > .section-banded,
 .navbar-custom > .container-lg,
+.navbar > .section-plain,
 .navbar-custom > .section-plain,
+.navbar > .section-banded,
 .navbar-custom > .section-banded,
 .navbar > .container-xl,
 .navbar-custom > .container-xl,
@@ -7594,7 +7594,7 @@ textarea.form-control-lg {
   border-color: rgba(var(--bs-black-rgb), var(--bs-border-opacity)) !important;
 }
 
-.border-white, .card-awards, .card-harford, .card-lsu, .card-job-ropes, .card-job-tech, .card-job-senior, .card-job-intern, .section-banded, .card-about {
+.border-white, .card-awards, .card-harford, .card-lsu, .card-job-ropes, .card-job-tech, .card-job-senior, .card-job-intern, .card-about, .section-banded {
   --bs-border-opacity: 1;
   border-color: rgba(var(--bs-white-rgb), var(--bs-border-opacity)) !important;
 }
@@ -8463,7 +8463,7 @@ textarea.form-control-lg {
   text-align: right !important;
 }
 
-.text-center, .site-footer, .section-plain, .section-banded, .about-card-link {
+.text-center, .site-footer, .alert, .section-plain, .section-banded, .large-icon-link {
   text-align: center !important;
 }
 
@@ -12071,6 +12071,17 @@ textarea.form-control-lg {
   background-color: #ffcd37 !important;
 }
 
+body {
+  background-image: url("../img/freybg.jpg");
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: darken;
+  backdrop-filter: grayscale(30%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 html {
   overflow: scroll;
   overflow-x: hidden;
@@ -12121,6 +12132,11 @@ html {
   color: #aaaaaa;
 }
 
+.large-icon-link {
+  margin: 0;
+  font-size: 200%;
+}
+
 .table-cell {
   font-style: italic;
 }
@@ -12135,15 +12151,8 @@ a.anchor {
   visibility: hidden;
 }
 
-body {
-  background-image: url("../img/freybg.jpg");
-  background-color: rgba(0, 0, 0, 0.6);
-  background-blend-mode: darken;
-  backdrop-filter: grayscale(30%);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+.section-heading {
+  color: white;
 }
 
 .nav-logo {
@@ -12169,21 +12178,7 @@ body {
   height: max-content;
 }
 .card-about .card-body p {
-  text-align: left;
   font-size: 125%;
-}
-
-.about-card-link {
-  margin: 0;
-  font-size: 200%;
-}
-
-.card-body-left {
-  text-align: left;
-}
-
-.section-heading {
-  color: white;
 }
 
 .card-subtitle-gray {
