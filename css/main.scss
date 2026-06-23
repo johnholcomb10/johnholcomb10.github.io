@@ -171,6 +171,11 @@ a.anchor {
 
   .container-lg {
     position: relative;
+    justify-content: flex-start;
+  }
+
+  .navbar-toggler {
+    margin-left: auto;
   }
 
   @include media-breakpoint-up(sm) {
@@ -205,15 +210,18 @@ a.anchor {
 .profile-photo {
   @extend .rounded;
   @extend .d-block;
+  @extend .mx-auto;
   width: 120px;
   border-radius: 50%;
 }
 
 .text-white-heading {
+  @extend .text-center;
   color: white;
 }
 
 .text-lightgray {
+  @extend .text-center;
   color: lightgray;
 }
 

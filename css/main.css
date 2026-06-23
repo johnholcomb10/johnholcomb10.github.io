@@ -7965,7 +7965,7 @@ textarea.form-control-lg {
   margin-left: 3rem !important;
 }
 
-.mx-auto {
+.mx-auto, .profile-photo {
   margin-right: auto !important;
   margin-left: auto !important;
 }
@@ -8463,7 +8463,7 @@ textarea.form-control-lg {
   text-align: right !important;
 }
 
-.text-center, .site-footer, .alert, .section-plain, .section-banded, .large-icon-link {
+.text-center, .site-footer, .text-lightgray, .text-white-heading, .alert, .section-plain, .section-banded, .large-icon-link {
   text-align: center !important;
 }
 
@@ -12157,6 +12157,10 @@ a.anchor {
 
 .navbar-custom .container-lg, .navbar-custom .section-banded, .navbar-custom .section-plain {
   position: relative;
+  justify-content: flex-start;
+}
+.navbar-custom .navbar-toggler {
+  margin-left: auto;
 }
 @media (min-width: 576px) {
   .navbar-custom .navbar-collapse {
