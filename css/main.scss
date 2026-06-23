@@ -1,54 +1,80 @@
-@import "bootstrap.min.css";
+// ==========================================================================
+// Bootstrap (Sass source — required so @extend below can pull in
+// Bootstrap's utility/color/spacing classes)
+// ==========================================================================
+@import "../node_modules/bootstrap/scss/bootstrap";
 
+// ==========================================================================
+// Theme colors
+// ==========================================================================
 .w3-theme-lp {
-  color:#000 !important;
-  background-color:#c1ade5 !important;
+  color: #000 !important;
+  background-color: #c1ade5 !important;
 }
 
 .w3-theme-p {
-  color:#fff !important;
-  background-color:#845bcb !important;
+  color: #fff !important;
+  background-color: #845bcb !important;
 }
 
 .w3-theme-la {
-  color:#000 !important;
-  background-color:#ffe69b !important;
+  color: #000 !important;
+  background-color: #ffe69b !important;
 }
 
 .w3-theme-a {
-  color:#000 !important;
-  background-color:#ffcd37 !important;
+  color: #000 !important;
+  background-color: #ffcd37 !important;
 }
 
-/*-------------------------*/
-/* Custom scrollbar styles */
+// ==========================================================================
+// Body background
+// ==========================================================================
+body {
+  background-image: url('../img/freybg.jpg');
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: darken;
+  -webkit-backdrop-filter: grayscale(30%); // Safari
+  backdrop-filter: grayscale(30%); // Other browsers
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+// ==========================================================================
+// Scrollbar
+// ==========================================================================
 html {
-    overflow: scroll; overflow-x: hidden;
+  overflow: scroll;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #ffffff #212529;
 }
 
-/* WebKit browsers */
-::-webkit-scrollbar { width: 4px; background: #212529;}
-
-::-webkit-scrollbar-thumb { background: #FFFFFF; border-radius: 2px; }
-
-/* Non-WebKit browsers */
-html {
-    scrollbar-width: thin;
-    scrollbar-color: #FFFFFF #212529;
+::-webkit-scrollbar {
+  width: 4px;
+  background: #212529;
 }
 
-/*-------------------------*/
+::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 2px;
+}
 
+// ==========================================================================
+// Social icon links
+// ==========================================================================
 .social-icon {
   color: #aaaaaa;
   transition: color 0.2s;
   text-decoration: none;
   margin: 0 4px;
   font-size: 80%;
-}
 
-.social-icon:hover {
-  color: #ffffff;
+  &:hover {
+    color: #ffffff;
+  }
 }
 
 .dark-social-icon {
@@ -57,10 +83,10 @@ html {
   text-decoration: none;
   margin: 0 4px;
   font-size: 80%;
-}
 
-.dark-social-icon:hover {
-  color: #ffffff;
+  &:hover {
+    color: #ffffff;
+  }
 }
 
 .white-social-icon {
@@ -69,27 +95,39 @@ html {
   text-decoration: none;
   margin: 0 4px;
   font-size: 80%;
+
+  &:hover {
+    color: #aaaaaa;
+  }
 }
 
-.white-social-icon:hover {
-  color: #aaaaaa;
+.large-icon-link {
+  @extend .text-center;
+  margin: 0;
+  font-size: 200%;
 }
 
+// ==========================================================================
+// Table cells
+// ==========================================================================
 .table-cell {
+  @extend .bg-transparent;
+  @extend .text-white;
   font-style: italic;
+
+  &:hover {
+    font-size: 105%;
+  }
 }
 
-.table-cell:hover {
-  font-size: 105%;
-}
-
-/*
-Source - https://stackoverflow.com/a/20358308
-Posted by FredTheLover, modified by community. See post 'Timeline' for change history
-Retrieved 2026-01-23, License - CC BY-SA 3.0
-
-Positions anchor lower than where it actually appears on screen, preventing header from blocking intended target.
-*/
+// ==========================================================================
+// Section anchor offset
+// Source - https://stackoverflow.com/a/20358308
+// Posted by FredTheLover, modified by community. See post 'Timeline' for
+// change history. Retrieved 2026-01-23, License - CC BY-SA 3.0
+// Positions anchor lower than where it actually appears on screen,
+// preventing header from blocking intended target.
+// ==========================================================================
 a.anchor {
   display: block;
   position: relative;
@@ -97,93 +135,238 @@ a.anchor {
   visibility: hidden;
 }
 
-body {
-  background-image: url('../img/freybg.jpg');
-  background-color: rgba(0, 0, 0, 0.6);
-  background-blend-mode: darken;
-  -webkit-backdrop-filter: grayscale(30%); /* Safari */
-  backdrop-filter: grayscale(30%); /* Other browsers */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+// ==========================================================================
+// Section headings & banded section backgrounds
+// ==========================================================================
+.section-heading {
+  color: white;
 }
 
-/* ── Navbar ── */
+// Job Experience, Projects, and Contact sections
+.section-banded {
+  @extend .container-lg;
+  @extend .py-3;
+  @extend .bg-light;
+  @extend .bg-opacity-25;
+  @extend .border-white;
+  @extend .text-center;
+}
+
+// Education and Awards sections
+.section-plain {
+  @extend .container-lg;
+  @extend .py-3;
+  @extend .text-center;
+}
+
+// ==========================================================================
+// Navbar
+// ==========================================================================
+.navbar-custom {
+  @extend .navbar;
+  @extend .sticky-top;
+  @extend .navbar-expand-sm;
+  @extend .navbar-dark;
+  @extend .bg-dark;
+
+  .container-lg {
+    position: relative;
+    justify-content: flex-start;
+  }
+
+  .navbar-toggler {
+    margin-left: auto;
+  }
+
+  @include media-breakpoint-up(sm) {
+    .navbar-collapse {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
 .nav-logo {
+  @extend .rounded;
+  @extend .d-block;
   width: 40px;
 }
 
-/* ── Sidebar ── */
+// ==========================================================================
+// Disclaimer
+// ==========================================================================
+.alert {
+  @extend .text-center;
+}
+
+// ==========================================================================
+// Sidebar
+// ==========================================================================
 .profile-photo {
+  @extend .rounded;
+  @extend .d-block;
+  @extend .mx-auto;
   width: 120px;
   border-radius: 50%;
 }
 
 .text-white-heading {
+  @extend .text-center;
   color: white;
 }
 
 .text-lightgray {
+  @extend .text-center;
   color: lightgray;
 }
 
-/* ── About Me card ── */
-.about-card {
+// ==========================================================================
+// About Me card
+// ==========================================================================
+.card-about {
+  @extend .card;
+  @extend .text-white;
+  @extend .bg-dark;
+  @extend .bg-opacity-75;
+  @extend .border-white;
   text-align: center;
   height: max-content;
+
+  .card-body p {
+    font-size: 125%; 
+  }
 }
 
-.about-card .card-body p {
-  text-align: left;
-  font-size: 125%;
-}
-
-.about-card-link {
-  margin: 0;
-  font-size: 200%;
-}
-
-/* ── Job / Education card body paragraphs ── */
-.card-body-left {
-  text-align: left;
-}
-
-/* ── Section headings ── */
-.section-heading {
-  color: white;
-}
-
-/* ── Job experience card subtitles ── */
+// ==========================================================================
+// Job experience cards
+// ==========================================================================
 .card-subtitle-gray {
   color: lightgray;
 }
 
-/* ── Education cards ── */
-.bg-lsu {
+%card-job-base {
+  @extend .card;
+  @extend .text-white;
+  @extend .bg-opacity-50;
+  @extend .border-white;
+}
+
+.card-job-intern {
+  @extend %card-job-base;
+  @extend .bg-primary;
+}
+
+.card-job-senior {
+  @extend %card-job-base;
+  @extend .bg-warning;
+}
+
+.card-job-tech {
+  @extend %card-job-base;
+  @extend .bg-danger;
+}
+
+.card-job-ropes {
+  @extend %card-job-base;
+  @extend .bg-success;
+}
+
+// "This Summer" badge on the IT Intern card
+.badge-current {
+  @extend .badge;
+  @extend .bg-success;
+}
+
+// ==========================================================================
+// Education cards
+// ==========================================================================
+%card-edu-base {
+  @extend .card;
+  @extend .text-white;
+  @extend .border-white;
+}
+
+.card-lsu {
+  @extend %card-edu-base;
   background-color: #845bcb7e;
 }
 
-.bg-harford {
+.card-harford {
+  @extend %card-edu-base;
   background-color: #ffe69b85;
 }
 
-/* ── Project cards ── */
-.bg-hellskate {
+// ==========================================================================
+// Project cards
+// ==========================================================================
+%card-project-base {
+  @extend .card;
+  @extend .border-dark;
+}
+
+.card-hellskate {
+  @extend %card-project-base;
+  @extend .text-white;
   background-color: #fa4109ab;
 }
 
-.bg-rollcall {
+.card-portfolio {
+  @extend %card-project-base;
+  @extend .text-dark;
+  @extend .bg-light;
+  @extend .bg-opacity-50;
+}
+
+.card-rollcall {
+  @extend %card-project-base;
+  @extend .text-white;
   background-color: #fa860984;
 }
 
-/* ── Contact section links ── */
+.card-misc {
+  @extend %card-project-base;
+  @extend .text-dark;
+  @extend .bg-warning;
+  @extend .bg-opacity-50;
+}
+
+// ==========================================================================
+// Awards card
+// ==========================================================================
+.card-awards {
+  @extend .card;
+  @extend .text-white;
+  @extend .border-white;
+  @extend .bg-dark;
+  @extend .bg-opacity-50;
+}
+
+// ==========================================================================
+// Contact section links
+// ==========================================================================
 .contact-link {
+  @extend .white-social-icon;
   margin: 0;
   font-size: 150%;
+
+  ion-icon {
+    font-size: 150%;
+  }
 }
 
-.contact-link ion-icon {
-  font-size: 150%;
+// ==========================================================================
+// Footer
+// ==========================================================================
+.site-footer {
+  @extend .bg-dark;
+  @extend .text-white;
+  @extend .text-center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-top: 1.5rem;
 }
-
